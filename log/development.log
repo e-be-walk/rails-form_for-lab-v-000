@@ -224,3 +224,48 @@ ActionController::RoutingError (No route matches [GET] "/student"):
 Started GET "/students/new" for 208.103.68.70 at 2018-05-14 11:42:09 +0000
 Processing by StudentsController#new as HTML
   Rendered students/new.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 427ms (Views: 420.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/school.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 208.103.68.70 at 2018-05-14 11:42:09 +0000
+
+
+Started GET "/assets/student.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 208.103.68.70 at 2018-05-14 11:42:09 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 208.103.68.70 at 2018-05-14 11:42:09 +0000
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 208.103.68.70 at 2018-05-14 11:42:09 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 208.103.68.70 at 2018-05-14 11:42:09 +0000
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 208.103.68.70 at 2018-05-14 11:42:09 +0000
+
+
+Started GET "/assets/student.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 208.103.68.70 at 2018-05-14 11:42:10 +0000
+
+
+Started GET "/assets/school.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 208.103.68.70 at 2018-05-14 11:42:10 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 208.103.68.70 at 2018-05-14 11:42:10 +0000
+
+
+Started POST "/students" for 208.103.68.70 at 2018-05-14 11:42:18 +0000
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cLbj0foZLSPN7+AXIFTLsZoKG3uWnDPzMAcW1KefM2TKXew/WCrGM8Cje2jfBB5b06m1rN6N+1aLnSRAdu92TA==", "student"=>{"first_name"=>"Erin", "last_name"=>"Walker"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Erin"], ["last_name", "Walker"], ["created_at", "2018-05-14 11:42:18.254800"], ["updated_at", "2018-05-14 11:42:18.254800"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://67.205.165.109:34160/students/1
+Completed 302 Found in 6ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/students/1" for 208.103.68.70 at 2018-05-14 11:42:18 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/show.html.erb within layouts/application (0.6ms)
